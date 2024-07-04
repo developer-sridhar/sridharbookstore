@@ -4,6 +4,7 @@
   "description": "Share book,Sale Book & Buy books",
   "main": "index.js",
   "scripts": {
+    "build" : "npm start",
     "client-install": "npm install --prefix client",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
