@@ -9,7 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.uri || "mongodb+srv://sridhar:sridhar@cluster0.lfgrjoe.mongodb.net/bookInventory?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
+// const client = new MongoClient(uri);
+
+const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,
+    tlsAllowInvalidCertificates: true
+});
+
 
 async function run() {
     try {
