@@ -55,7 +55,7 @@ const UploadBook = () => {
       bookTitle, authorName, imageUrl, category, bookDescription, bookPrice
     };
 
-    fetch("http://localhost:5000/upload-book", {
+    fetch("https://sridharbookstore.onrender.com/upload-book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

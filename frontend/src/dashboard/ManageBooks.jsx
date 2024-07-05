@@ -7,7 +7,7 @@ const ManageBooks = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-books")
+    fetch("https://sridharbookstore.onrender.com/all-books")
       .then(res => res.json())
       .then(data => setAllBooks(data));
   }, []);
@@ -20,7 +20,7 @@ const handleDelete = (id) => {
     return; // If user cancels, exit the function
   }
 
-  fetch(`http://localhost:5000/book/${id}`, {
+  fetch(`https://sridharbookstore.onrender.com/book/${id}`, {
     method: "DELETE",
   })
     .then(res => res.json())

@@ -8,7 +8,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTotalBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/total-books');
+        const response = await axios.get('https://sridharbookstore.onrender.com/total-books');
         setTotalBooks(response.data.totalBooks);
       } catch (error) {
         console.error("Error fetching total books count:", error);

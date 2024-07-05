@@ -68,7 +68,7 @@ const EditBooks = () => {
       bookPrice
     };
 
-    fetch(`http://localhost:5000/book/${id}`, {
+    fetch(`https://sridharbookstore.onrender.com/book/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
