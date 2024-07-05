@@ -38,13 +38,13 @@ async function run() {
         });
 
         // Serve static assets in production
-        if (process.env.NODE_ENV === "production") {
-            app.use(express.static(path.join(__dirname, "frontend/build")));
+        // if (process.env.NODE_ENV === "production") {
+        //     app.use(express.static(path.join(__dirname, "frontend/build")));
 
-            app.get("*", (req, res) => {
-                res.sendFile(path.join(__dirname, "frontend/build/index.html"));
-            });
-        }
+        //     app.get("*", (req, res) => {
+        //         res.sendFile(path.join(__dirname, "frontend/build/index.html"));
+        //     });
+        // }
 
         // Fetch a user by ID
         app.get("/user/:id", async(req, res) => {
