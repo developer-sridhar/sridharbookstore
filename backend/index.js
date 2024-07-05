@@ -1,15 +1,15 @@
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
 const cors = require('cors');
-const path = require('path');  // Make sure to add this line
+const path = require('path'); 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-const uri = "mongodb+srv://sridhar:sridhar@cluster0.lfgrjoe.mongodb.net/bookInventory?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
+const MONGODB_URI = "mongodb+srv://sridhar:sridhar@cluster0.lfgrjoe.mongodb.net/bookInventory?retryWrites=true&w=majority&appName=Cluster0";
+const client = new MongoClient(MONGODB_URI);
 
 async function run() {
     try {
@@ -32,7 +32,7 @@ async function run() {
                     res.status(401).json({ success: false, message: "Invalid email or password" });
                 }
             } catch (error) {
-                console.error("Error during login:", error);
+                console.error("Error dMONGODB_URIng login:", error);
                 res.status(500).json({ success: false, message: "Internal server error" });
             }
         });
