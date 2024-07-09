@@ -45,7 +45,7 @@ const BookCards = ({ headline, books, addToWishlist }) => {
                             <Card key={book._id} className='bg-teal-200'>
                                 <Link to={`/book/${book._id}`}>
                                 <div className='relative'>
-                                        <img src={book.imageUrl} alt="" className='text-gray-500 text-sm' />
+                                        <img src={book.imageUrl} alt="" className='text-gray-500 text-sm object-contain' />
                                         <div className='absolute top-3 right-3 bg-blue-600 p-1 rounded'>
                                             <MdOutlineFavorite className='w-4 h-4 text-white hover:text-red-600 ' />
                                         </div>
